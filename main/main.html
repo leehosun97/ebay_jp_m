@@ -1,0 +1,884 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="csrf-token" content="78voZKhQ38Pc03Lpfwi9PBHSi3pyyP2Pz5Cw2fCq">
+<meta name="author" content="">
+<meta name="keyword" content="">
+<meta name="description" content="">
+<title>eBay Japan</title>
+<link rel="stylesheet" href="../css/general.css?v=1912">
+<link rel="stylesheet" href="../css/swiper.min.css">
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="gnb_wrap">
+            <div class="head_area">
+				<div class="btn_area">
+	                <button type="button" class="btn heart">favorite</button>
+	                <button type="button" class="btn close" onclick="menuClose()">GNB Close</button>
+				</div>					
+				<h3>
+					<span style="background-color: #1bd05d;">Green</span><a href="#">이영우</a>
+				</h3>
+				<div class="head_info">
+					<a href="#" class="btn">
+						<strong>0</strong>
+						<span>Recent Order</span>
+					</a>
+					<a href="#" class="btn">
+						<strong>0</strong>
+						<span>Coupon</span>
+					</a>
+					<a href="#" class="btn">
+						<strong>0</strong>
+						<span>E-Cash</span>
+					</a>
+					<a href="#" class="btn">
+						<strong>0</strong>
+						<span>Deposit</span>
+					</a>
+				</div>
+			</div>
+            <section>
+				<h3 class="gnb_tit">Category</h3>
+				<div class="gnb_list">
+					<ul>
+						<li><a href="#">モータース</a></li>
+						<li><a href="#">ファッション</a></li>
+						<li><a href="#">デジタル</a></li>
+						<li><a href="#">収集 &amp; 芸術</a></li>
+						<li><a href="#">家 &amp; ガーデン</a></li>
+						<li><a href="#">スポーツ</a></li>
+						<li><a href="#">玩具 &amp; 趣味</a></li>
+						<li><a href="#">産業用品</a></li>
+						<li><a href="#">その他</a></li>
+						<li><a href="#" class="on">イーベイ ホットディール</a></li>
+					</ul>
+				</div>
+            </section>
+            
+			<section class="today_goods">
+				<h3 class="gnb_tit">Today’s View</h3>
+				<div class="today_slide">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="#"><img src="../images/sub/t_img01.jpg" alt="今日見た商品 image"></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#"><img src="../images/sub/t_img02.jpg" alt="今日見た商品 image"></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#"><img src="../images/sub/t_img03.jpg" alt="今日見た商品 image"></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#"><img src="../images/sub/t_img04.jpg" alt="今日見た商品 image"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="gnb_img">
+				<a href="#">
+					<img src="../images/common/gnb_pop.jpg" alt="gnb Image">
+				</a>
+			</div>
+			<div class="gnb_btn">
+				<button type="button" class="btn sign"><i></i>Sign out</button>
+				<button type="button" class="btn revise"><i></i>회원정보수정</button>
+			</div>
+        </div><!--//gnb_wrap-->
+
+        <header id="header" class="main_header">
+			<!-- 메인 헤더 -->
+			<div class="inner">
+				<div class="header_main active">
+					<h1 class="tit_logo">
+						<a href="#">
+							<img src="../images/common/logo.png" alt="eBay company">
+						</a>
+					</h1>
+					<div class="quick_menu">
+						<button type="button" class="btn btn_cart balloon_num">Cart</button>
+						<button type="button" class="btn btn_user">User</button>
+						<button type="button" class="btn btn_menu" onclick="menuBtn()">Toggle</button>
+					</div>
+				</div>
+
+				<!-- 검색창 헤더 -->
+				<div class="header_srch">
+					<form action="#" method="get">
+						<fieldset>
+							<legend>Search Form</legend>								
+							<input type="search" class="srch_inputText" id="input_keyword_header" title="search keyword" placeholder="何かお探しですか?" onclick="srchOpen();">
+							<div class="srch_ctrl">
+								<button type="button" class="btn btn_close">input text delete</button>
+								<button type="submit" class="btn btn_search" onclick="srchOpen();">Search</button>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+
+				<!-- Nav : Main menu -->
+				<nav class="main_nav_deal active on" id="div_deal_list">
+					<div class="nav_deal_child">
+						<ul>
+							 <li class="active"><a href="#">MOTORS</a></li>
+							 <li><a href="#">FASHION</a></li>
+							 <li><a href="#">DIGITAL</a></li>
+							 <li><a href="#">COLLECTIBLE</a></li>
+							 <li><a href="#">HOME</a></li>
+							 <li><a href="#">SPORTS</a></li>
+							 <li><a href="#">TOYS</a></li>
+							 <li><a href="#">HOT DEAL</a></li>
+							 <li><a href="#">REVIEW</a></li>
+						</ul>
+					</div>
+				</nav>
+
+				<!-- Search Header START -->
+				<div id="div_search_form" class="header_srch_list">
+					<div class="header_sub header_srch">
+						<div class="srch_wrap">
+							<input type="text" name="header_search" id="header_search" placeholder="何かお探しですか?">
+							<label for="header_search" class="blind">何かお探しですか?</label>
+							<button type="button" class="btn clear">clear button</button>
+							<button type="button" class="btn srch">Search button</button>
+						</div>
+						<div class="r_area">
+							<button type="button" class="btn close" onclick="srchClose();">Close</button>
+						</div>
+					</div>
+
+					<!-- 자동 검색 레이어 -->
+					<div class="srch_content srch_result">
+						<ul class="result_list">
+							<li>
+								<div class="result_tit">
+									<a href="#"><strong>韓国</strong>ファッション</a>
+								</div>
+								<div class="r_area">
+									<span>10.31</span>
+									<button type="button" class="btn">close</button>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#"><strong>韓国</strong>コスメチック</a>
+								</div>
+								<div class="r_area">
+									<span>10.31</span>
+									<button type="button" class="btn">close</button>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#"><strong>韓国</strong>食品</a>
+								</div>
+								<div class="r_area">
+									<a href="#" class="btn link">link</a>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#"><strong>韓国</strong>IPHONEケース</a>
+								</div>
+								<div class="r_area">
+									<a href="#" class="btn link">link</a>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#">Bts<strong>韓国</strong></a>
+								</div>
+								<div class="r_area">
+									<a href="#" class="btn link">link</a>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#"><strong>韓国</strong>ファッション</a>
+								</div>
+								<div class="r_area">
+									<a href="#" class="btn link">link</a>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#"><strong>韓国</strong>コスメチック</a>
+								</div>
+								<div class="r_area">
+									<a href="#" class="btn link">link</a>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#"><strong>韓国</strong>食品</a>
+								</div>
+								<div class="r_area">
+									<a href="#" class="btn link">link</a>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#"><strong>韓国</strong>IPHONEケース</a>
+								</div>
+								<div class="r_area">
+									<a href="#" class="btn link">link</a>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#">Bts<strong>韓国</strong></a>
+								</div>
+								<div class="r_area">
+									<a href="#" class="btn link">link</a>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#"><strong>韓国</strong>ファッション</a>
+								</div>
+								<div class="r_area">
+									<a href="#" class="btn link">link</a>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#"><strong>韓国</strong>コスメチック</a>
+								</div>
+								<div class="r_area">
+									<a href="#" class="btn link">link</a>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#"><strong>韓国</strong>食品</a>
+								</div>
+								<div class="r_area">
+									<a href="#" class="btn link">link</a>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#"><strong>韓国</strong>ファッション</a>
+								</div>
+								<div class="r_area">
+									<a href="#" class="btn link">link</a>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#"><strong>韓国</strong>コスメチック</a>
+								</div>
+								<div class="r_area">
+									<a href="#" class="btn link">link</a>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#"><strong>韓国</strong>食品</a>
+								</div>
+								<div class="r_area">
+									<a href="#" class="btn link">link</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<!--search keyword-->
+					<div class="srch_content">
+						<h3 class="sub_title03">キーワード履歴</h3>
+						<button type="button" class="btn delete">全体削除</button>
+						<ul class="result_list">
+							<li>
+								<div class="result_tit">
+									<a href="#">韓国ファッション</a>
+								</div>
+								<div class="r_area">
+									<span>10.31</span>
+									<button type="button" class="btn">close</button>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#">韓国コスメチック</a>
+								</div>
+								<div class="r_area">
+									<span>10.31</span>
+									<button type="button" class="btn">close</button>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#">韓国食品</a>
+								</div>
+								<div class="r_area">
+									<span>10.30</span>
+									<button type="button" class="btn">close</button>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#">IPHONEケース</a>
+								</div>
+								<div class="r_area">
+									<span class="heart">like</span>
+									<button type="button" class="btn">close</button>
+								</div>
+							</li>
+							<li>
+								<div class="result_tit">
+									<a href="#">Bts</a>
+								</div>
+								<div class="r_area">
+									<span class="heart">like</span>
+									<button type="button" class="btn">close</button>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<!--today's view images-->
+					<div class="today_goods">
+						<h2 class="sub_title03">今日見た商品</h2>
+						<div class="today_slide">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a href="#"><img src="../images/sub/t_img01.jpg" alt="今日見た商品 image"></a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#"><img src="../images/sub/t_img02.jpg" alt="今日見た商品 image"></a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#"><img src="../images/sub/t_img03.jpg" alt="今日見た商品 image"></a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#"><img src="../images/sub/t_img04.jpg" alt="今日見た商品 image"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--search hot keyword-->
+        
+					<div class="keyword_wrap">
+						<h2 class="sub_title03">人気キーワード</h2>
+						<div class="keyword_list">
+							<a href="#" class="btn"># 韓国ファッション</a>
+							<a href="#" class="btn"># 3ce</a>
+							<a href="#" class="btn"># Bts</a>
+							<a href="#" class="btn"># IPHONEケース</a>
+							<a href="#" class="btn"># パンツ韓国</a>
+							<a href="#" class="btn"># 韓国コスメチック</a>
+							<a href="#" class="btn"># 韓国食品</a>
+							<a href="#" class="btn"># beauty</a>
+							<a href="#" class="btn"># pants</a>
+							<a href="#" class="btn"># lipstic</a>
+						</div>
+					</div>
+					<!-- Search Header END -->
+				</div>
+			</div>
+			<!-- //header_fixed -->
+		</header>
+        
+		<section class="banner_wrap">
+			<h2 class="blind">banner_slide</h2>
+			<div class="img_bn">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#"><img src="../images/main/slide_img01.jpg" alt="banner image"></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="../images/main/slide_img01.jpg" alt="banner image"></a>
+						</div>
+					</div>
+					<div class="bn_crtl">
+						<div class="swiper-pagination"></div>
+						<button type="button" class="btn" onclick="bnOpen();">popup open</button>
+					</div>
+				</div>
+			</div>
+			<div class="txt_bn">
+				<a href="#">eBay Global Market Shopping Guide</a>
+			</div>
+		</section>
+
+		<div class="banner_popup" id="banner_list_popup">
+			<div class="popup_bg"></div>
+			<div class="pop_content">
+				<div class="pop_head">
+					<button type="button" class="btn close" onclick="bnClose();">Popup Close</button>
+				</div>
+				<div class="pop_body">
+					<ul class="pop_bn_list">
+						<li>
+							<a href="#"><img src="../images/main/slide_img01.jpg" alt="MKT_年末特集"></a>
+						</li>
+						<li>
+							<a href="#"><img src="../images/main/event_img02.jpg" alt="MKT_年末特集"></a>
+						</li>
+						<li>
+							<a href="#"><img src="../images/main/event_img01.jpg" alt="MKT_年末特集"></a>
+						</li>
+						<li>
+							<a href="#"><img src="../images/main/event_img03.jpg" alt="MKT_年末特集"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<section class="official_wrap">
+			<h2 class="sub_title">eBay Official Store</h2>
+			<div class="goods_slide slide01">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/store_goods01.png" alt="カバン image"></span>
+								<span class="name">カバン</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/store_goods02.png" alt="運動靴 image"></span>
+								<span class="name">運動靴</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/store_goods03.png" alt="ドローン image"></span>
+								<span class="name">ドローン</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/store_goods04.png" alt="自転車 image"></span>
+								<span class="name">自転車</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/store_goods05.png" alt="アメリカンフットボール image"></span>
+								<span class="name">アメリカンフットボール</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/store_goods06.png" alt="キダルト image"></span>
+								<span class="name">キダルト</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/store_goods07.png" alt="スポーツ image"></span>
+								<span class="name">スポーツ</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="hotdeal_wrap">
+			<h2 class="sub_title">
+				Best Hot Deal
+				<a href="#" class="btn">全体を見る</a>
+			</h2>
+			<div class="box">
+				<div class="img_area">
+					<div class="info_area">
+						<p class="type01"><strong>55</strong>%</p>
+						<div class="sale">
+							<p>手数料<br> 50% 割引</p>
+						</div>
+					</div>
+					<a href="#">
+						<img src="../images/main/hotdeal_img01.jpg" alt="Pixel XL Case by Google">
+					</a>
+				</div>
+				<div class="con_box">
+					<dl>
+						<dt class="dot">[数量限定! Google PixelXL 128G unlock seller-rifurbished]</dt>
+						<dd class="dot">Google Pixel XL Phone 5.5</dd>
+					</dl>
+					<p><span>$549.00</span> <strong>$244.99</strong></p>
+				</div>
+			</div>
+			<div class="box">
+				<div class="img_area">
+					<div class="info_area">
+						<p class="type01"><strong>50</strong>%</p>
+						<div class="sale">
+							<p>手数料<br> 50% 割引</p>
+						</div>
+					</div>
+					<a href="#">
+						<img src="../images/main/hotdeal_img02.jpg" alt="New Balance 993 gray">
+					</a>
+				</div>
+				<div class="con_box">
+					<dl>
+						<dt class="dot">[数量限定! New Balance 993 gray unlock seller-rifurbished]</dt>
+						<dd class="dot">New Balance 993 gray</dd>
+					</dl>
+					<p><span>$180.00</span> <strong>$90.00</strong></p>
+				</div>
+			</div>
+			<div class="box">
+				<div class="img_area">
+					<div class="info_area">
+						<p class="type01"><strong>55</strong>%</p>
+						<div class="sale">
+							<p>手数料<br> 50% 割引</p>
+						</div>
+					</div>
+					<a href="#">
+						<img src="../images/main/hotdeal_img01.jpg" alt="Pixel XL Case by Google">
+					</a>
+				</div>
+				<div class="con_box">
+					<dl>
+						<dt class="dot">[数量限定! Google PixelXL 128G unlock seller-rifurbished]</dt>
+						<dd class="dot">Google Pixel XL Phone 5.5</dd>
+					</dl>
+					<p><span>$549.00</span> <strong>$244.99</strong></p>
+				</div>
+			</div>
+		</section>
+
+		<section class="official_wrap type-02">
+			<h2 class="sub_title">Collection&amp;Event</h2>
+			<ul class="event_list">
+				<li>
+					<div class="img"><a href="#"><img src="../images/main/event_img01.jpg" alt="event image"></a></div>
+					<dl class="txt">
+						<dt class="dot">2月も毎日出席してください! </dt>
+						<dd class="dot">最大五万ウォンの景品挑戦~ 毎日来たら 1千ウォンまた 差し上げます!</dd>
+					</dl>
+				</li>
+				<li>
+					<div class="img"><a href="#"><img src="../images/main/event_img02.jpg" alt="event image"></a></div>
+					<dl class="txt">
+						<dt class="dot">4月も毎日出席してください! </dt>
+						<dd class="dot">最大五万ウォンの景品挑戦~ 毎日来たら 1千ウォンまた 差し上げます!</dd>
+					</dl>
+				</li>
+				<li>
+					<div class="img"><a href="#"><img src="../images/main/event_img02.jpg" alt="event image"></a></div>
+					<dl class="txt">
+						<dt class="dot">4月も毎日出席してください! </dt>
+						<dd class="dot">最大五万ウォンの景品挑戦~ 毎日来たら 1千ウォンまた 差し上げます!</dd>
+					</dl>
+				</li>
+				<li>
+					<div class="img"><a href="#"><img src="../images/main/event_img03.jpg" alt="event image"></a></div>
+					<dl class="txt">
+						<dt class="dot">2月も毎日出席してください! </dt>
+						<dd class="dot">最大五万ウォンの景品挑戦~ 毎日来たら 1千ウォンまた 差し上げます!</dd>
+					</dl>
+				</li>
+				<li>
+					<div class="img"><a href="#"><img src="../images/main/event_img01.jpg" alt="event image"></a></div>
+					<dl class="txt">
+						<dt class="dot">2月も毎日出席してください! </dt>
+						<dd class="dot">最大五万ウォンの景品挑戦~ 毎日来たら 1千ウォンまた 差し上げます!</dd>
+					</dl>
+				</li>
+				<li>
+					<div class="img"><a href="#"><img src="../images/main/event_img02.jpg" alt="event image"></a></div>
+					<dl class="txt">
+						<dt class="dot">4月も毎日出席してください! </dt>
+						<dd class="dot">最大五万ウォンの景品挑戦~ 毎日来たら 1千ウォンまた 差し上げます!</dd>
+					</dl>
+				</li>
+			</ul>
+		</section>
+		
+		<section class="official_wrap type-03">
+			<h2 class="sub_title">Hot Category</h2>
+			<div class="goods_slide slide02">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/store_goods03.png" alt="ドローン image"></span>
+								<span class="name">ドローン</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/store_goods04.png" alt="自転車 image"></span>
+								<span class="name">自転車</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/store_goods05.png" alt="アメリカンフットボール image"></span>
+								<span class="name">アメリカンフットボール</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/store_goods06.png" alt="キダルト image"></span>
+								<span class="name">キダルト</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/store_goods07.png" alt="スポーツ image"></span>
+								<span class="name">スポーツ</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/store_goods01.png" alt="カバン image"></span>
+								<span class="name">カバン</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/store_goods02.png" alt="運動靴 image"></span>
+								<span class="name">運動靴</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="official_wrap md_wrap">
+			<h2 class="sub_title">
+				MD's Pick
+				<a href="#" class="btn">全体を見る</a>
+			</h2>
+			<div class="goods_slide">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/md_goods01.jpg" alt="MD's Pick image"></span>
+								<span class="name">$ 299.95</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/md_goods02.jpg" alt="MD's Pick image"></span>
+								<span class="name">$ 259.95</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/md_goods01.jpg" alt="MD's Pick image"></span>
+								<span class="name">$ 299.95</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/md_goods02.jpg" alt="MD's Pick image"></span>
+								<span class="name">$ 259.95</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/md_goods01.jpg" alt="MD's Pick image"></span>
+								<span class="name">$ 299.95</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/md_goods02.jpg" alt="MD's Pick image"></span>
+								<span class="name">$ 259.95</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/md_goods01.jpg" alt="MD's Pick image"></span>
+								<span class="name">$ 299.95</span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<span class="img"><img src="../images/main/md_goods02.jpg" alt="MD's Pick image"></span>
+								<span class="name">$ 259.95</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="nm_wrap">
+			<h2 class="sub_title">
+				Notice / More
+				<a href="#" class="btn">全体を見る</a>
+			</h2>
+			<ul class="notice_list">
+				<li>
+					<div class="title"><a href="#">個人情報保護政策や利用約款が変更 個人情報保護政策や利用約款が変更</a></div>
+					<div class="date">2019-12-17</div>
+				</li>
+				<li>
+					<div class="title"><a href="#">個人情報保護政策や利用約款が変更</a></div>
+					<div class="date">2019-12-17</div>
+				</li>
+				<li>
+					<div class="title"><a href="#">個人情報保護政策や利用約款が変更</a></div>
+					<div class="date">2019-12-17</div>
+				</li>
+				<li>
+					<div class="title"><a href="#">個人情報保護政策や利用約款が変更</a></div>
+					<div class="date">2019-12-17</div>
+				</li>
+			</ul>
+		</section>
+
+		<footer id="footer">
+			<div class="inner">
+				<div class="footer_btn">
+					<a href="#" class="btn">About Us</a>
+					<a href="#" class="btn">Help Center</a>
+					<a href="#" class="btn">PC Version</a>
+				</div>
+				<div class="footer_btn type-02">
+					<a href="#" class="btn">User Agreement</a>
+					<a href="#" class="btn">Privacy Policy</a>
+				</div>
+				<p class="copy">CopyRight &copy; Intercommerce</p>
+			</div>
+			<div class="fixed_area">
+				<a href="#" class="btn btn01">
+					<i>icon</i>
+					<span>Home</span>
+				</a>
+				<a href="#" class="btn btn02">
+					<i>icon</i>
+					<span>Category</span>
+				</a>
+				<a href="#" class="btn btn03">
+					<i>icon</i>
+					<span>Wish list</span>
+				</a>
+				<a href="#" class="btn btn04">
+					<i>icon</i>
+					<span>My</span>
+				</a>
+				<a href="#" class="btn btn05">
+					<i>icon</i>
+					<span>Today's view</span>
+				</a>
+			</div>
+		</footer>
+	</div>
+	<script>
+		var swiperVisual = new Swiper('.img_bn .swiper-container', {
+			spaceBetween:0,
+			loop:true,
+			draggable:true,
+			pagination: {
+				el: '.img_bn .swiper-pagination',
+				type: 'fraction',
+				clickable: true,
+			},
+		});
+
+		var officialSwipe01 = new Swiper('.official_wrap .slide01 .swiper-container', {
+			slidesPerGroup:1,
+			slidesPerView: 4.5,
+			spaceBetween:12,
+			draggable:true,
+		});
+
+		var officialSwipe02 = new Swiper('.official_wrap .slide02 .swiper-container', {
+			slidesPerGroup:1,
+			slidesPerView: 4.5,
+			spaceBetween:12,
+			draggable:true,
+		});
+
+		var officialSwipe03 = new Swiper('.official_wrap.md_wrap .swiper-container', {
+			slidesPerGroup:1,
+			slidesPerView: 4.5,
+			spaceBetween:5,
+			draggable:true,
+		});
+		
+		/* gnb_today */
+		var gnbToday = new Swiper('.gnb_wrap .today_slide .swiper-container', {
+			slidesPerGroup:1,
+			slidesPerView: 3.8,
+			spaceBetween:15,
+			draggable:true,
+		});
+		
+		/* search_today */
+		var searchToday = new Swiper('.header_srch_list .today_slide .swiper-container', {
+			slidesPerGroup:1,
+			slidesPerView: 3.8,
+			spaceBetween:15,
+			draggable:true,
+		});
+
+		/* header_search onclick */
+		function srchOpen() {
+			$('#div_search_form').css({"z-index": "100", "opacity": "1"});
+			$('html, body').css({"overflow": "hidden", "height": "100%"});
+		}
+		function srchClose() {
+			$('#div_search_form').css({"z-index": "-1", "opacity": "0"});
+			$('html, body').css({"overflow": "auto", "height": "auto"});
+		}
+
+		$("#div_search_form .header_sub .srch_wrap input").on("propertychange change keyup paste input", function() {
+			var srchInputValue = $(this).val().length;
+			if ( srchInputValue > 0) {
+				$('#div_search_form .header_sub .srch_wrap .srch').hide();
+				$('#div_search_form .header_sub .srch_wrap .clear').show();
+				$('#div_search_form .srch_content.srch_result').fadeIn();
+			} else {
+				$('#div_search_form .header_sub .srch_wrap .clear').hide();
+				$('#div_search_form .header_sub .srch_wrap .srch').show();
+				$('#div_search_form .srch_content.srch_result').hide();
+			}
+		});
+
+		/* banner Popup onclick */
+		function bnOpen() {
+			$('#banner_list_popup').fadeIn();
+			$('html, body').css({"overflow": "hidden", "height": "100%"});
+		}
+		function bnClose() {
+			$('#banner_list_popup').fadeOut();
+			$('html, body').css({"overflow": "auto", "height": "auto"});
+		}
+
+		/* mobile_gnb */
+		function menuBtn() {
+			$('html').css({'overflow': 'hidden', 'height': '100%'});
+			$('.gnb_wrap').animate({
+				"z-index": "100",
+				opacity: "1",
+			}, 500);
+		}
+
+		function menuClose() {
+			$('html').css({'overflow': 'auto', 'height': 'auto'});
+			$('.gnb_wrap').animate({
+				"z-index": "-1",
+				opacity: "0",
+			}, 500);
+		}
+	</script>
+</body>
+</html>
