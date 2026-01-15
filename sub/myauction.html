@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="csrf-token" content="78voZKhQ38Pc03Lpfwi9PBHSi3pyyP2Pz5Cw2fCq">
+<meta name="author" content="">
+<meta name="keyword" content="">
+<meta name="description" content="">
+<title>eBay Japan</title>
+<link rel="stylesheet" href="../css/general.css?v=1912">
+<link rel="stylesheet" href="../css/swiper.min.css">
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header" class="sub_header">
+			<!-- 메인 헤더 -->
+			<div class="inner">
+				<div class="header_sub">
+					<h1 class="tit_logo blind">
+						<a href="#">
+							<img src="../images/common/logo.png" alt="eBay company">
+						</a>
+					</h1>
+					<button type="button" class="btn prev">
+						<span>My Auctions</span>
+					</button>
+					<div class="r_area">
+						<button type="button" class="btn cart">
+							cart
+							<span class="on">1</span>
+						</button>
+						<button type="button" class="btn search">Search</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="order_period">
+			<button type="button" class="btn on">1개월</button>
+			<button type="button" class="btn">3개월</button>
+			<button type="button" class="btn">6개월</button>
+			<button type="button" class="btn">12개월</button>
+		</div>
+		<div class="progress_list">
+			<button type="button" class="btn on">전체<span>1</span></button>
+			<button type="button" class="btn">예약<span>0</span></button>
+			<button type="button" class="btn">입찰중<span>0</span></button>
+			<button type="button" class="btn">재입찰<span>0</span></button>
+			<button type="button" class="btn">유찰<span>0</span></button>
+			<button type="button" class="btn">낙찰<span>0</span></button>
+		</div>
+		<section class="cart_goods myauction">
+			<h2 class="blind">My Auctions</h2>
+			<div class="goods_con">
+				<div class="date_title">
+					<h3>2019-12-11</h3>
+					<p class="region">[アメリカ合衆国oregon物流センター経由]</p>
+				</div>
+				<div class="con_box">
+					<div class="img">
+						<div><img src="../images/sub/cart_img01.jpg" alt="goods image"></div>
+						<div class="bt_txt">
+							<p>일자</p>
+							<p>금액</p>
+						</div>
+					</div>
+					<div class="txt">
+						<div class="btn_wrap">
+							<p class="order_num">
+								注文番号 12312312312
+							</p>
+							<p class="name">
+								<span>Tomtopshop</span> [12312312312] Nike new with tag
+							</p>
+							<button class="btn" type="button">유찰</button>
+						</div>
+						<div class="bt_txt">
+							<p>입찰  19-12-04 08:00     종료  19-12-08 12:00</p>
+							<p>입찰  $202.49</p>
+						</div>
+					</div>
+				</div>
+				<div class="con_box">
+					<div class="img">
+						<div><img src="../images/sub/cart_img01.jpg" alt="goods image"></div>
+						<div class="bt_txt">
+							<p>일자</p>
+							<p>금액</p>
+						</div>
+					</div>
+					<div class="txt">
+						<div class="btn_wrap">
+							<p class="order_num">
+								注文番号 12312312312
+							</p>
+							<p class="name">
+								<span>Tomtopshop</span> [12312312312] Nike new with tag
+							</p>
+							<button class="btn" type="button">유찰</button>
+						</div>
+						<div class="bt_txt">
+							<p>입찰  19-12-04 08:00     종료  19-12-08 12:00</p>
+							<p>입찰  $202.49</p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="pagination">
+				<a href="#" class="prev">이전 페이지</a>
+				<a href="#" class="on">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#" class="next">다음 페이지</a>
+			</div>
+		</section>
+		<footer id="footer">
+			<div class="inner">
+				<div class="footer_btn">
+					<a href="#" class="btn">About Us</a>
+					<a href="#" class="btn">Help Center</a>
+					<a href="#" class="btn">PC Version</a>
+				</div>
+				<div class="footer_btn type-02">
+					<a href="#" class="btn">User Agreement</a>
+					<a href="#" class="btn">Privacy Policy</a>
+				</div>
+				<p class="copy">CopyRight &copy; Intercommerce</p>
+			</div>
+		</footer>
+	</div>
+	<script>
+		$('.order_period .btn').on('click',function(){
+			$(this).siblings('.btn').removeClass('on');
+			$(this).addClass('on');
+		});
+		$('.progress_list .btn').on('click',function(){
+			$(this).siblings('.btn').removeClass('on');
+			$(this).addClass('on');
+		});
+	</script>
+</body>
+</html>

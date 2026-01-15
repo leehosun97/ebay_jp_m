@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="csrf-token" content="78voZKhQ38Pc03Lpfwi9PBHSi3pyyP2Pz5Cw2fCq">
+<meta name="author" content="">
+<meta name="keyword" content="">
+<meta name="description" content="">
+<title>eBay Japan</title>
+<link rel="stylesheet" href="../css/general.css?v=1912">
+<link rel="stylesheet" href="../css/swiper.min.css">
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header" class="sub_header">
+			<!-- 메인 헤더 -->
+			<div class="inner">
+				<div class="header_sub">
+					<h1 class="tit_logo blind">
+						<a href="#">
+							<img src="../images/common/logo.png" alt="eBay company">
+						</a>
+					</h1>
+					<button type="button" class="btn prev">
+						<span>My Account</span>
+					</button>
+					<div class="r_area">
+						<button type="button" class="btn cart">
+							cart
+							<span class="on">1</span>
+						</button>
+						<button type="button" class="btn search">Search</button>
+					</div>
+				</div>
+			</div>
+			<!-- //header_fixed -->
+		</header>
+
+		<ul class="sub_tap type-02">
+			<li><a href="account01.html">Coupons</a></li>
+			<li><a href="account02.html">E-cash</a></li>
+			<li class="on"><a href="account03.html">Deposit</a></li>
+		</ul>
+        
+		<div class="order_period">
+			<button type="button" class="btn on">1개월</button>
+			<button type="button" class="btn">3개월</button>
+			<button type="button" class="btn">6개월</button>
+			<button type="button" class="btn">12개월</button>
+		</div>
+
+		<section class="account_area">
+			<h2 class="blind">Deposit Table</h2>
+			<div class="money_wrap">
+				<div class="money_txt">
+					나의 경매보증금 잔액 :
+					<strong>300,000 원</strong>
+				</div>
+				<ul class="balance">
+					<li>- 사용가능 : <span>300,000</span> 원</li>
+					<li>- 사용중 : <span>0</span> 원</li>
+				</ul>
+				<div class="btn_area">
+					<button type="button" class="btn form02">구매하기<i></i></button>
+					<button type="button" class="btn">환불신청<i></i></button>
+				</div>
+			</div>
+			<div class="table_wrap type-02">
+				<table>
+					<caption>Deposit Table</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">쿠폰정보</th>
+							<th scope="col">내역</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<p class="info">
+									<strong>+ 10,000 원 적립</strong>
+									(2019-09-24)
+								</p>
+							</td>
+							<td>
+								입금대기중
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="info">
+									<strong>+ 10,000 원 적립</strong>
+									(2019-09-19)
+								</p>
+							</td>
+							<td>
+								환불완료
+								<button type="button" class="btn" onclick="acPopOpen()">환불상세</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="info">
+									<strong>- 20,000 원 차감</strong>
+									(2019-03-20)
+								</p>
+							</td>
+							<td>
+								환불완료
+								<button type="button" class="btn" onclick="acPopOpen()">환불상세</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="info">
+									<strong>- 20,000 원 차감</strong>
+									(2019-03-20)
+								</p>
+							</td>
+							<td>
+								무통장환불 완료
+								<button type="button" class="btn" onclick="acPopOpen()">환불상세</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="info">
+									<strong>+ 20,000 원 적립</strong>
+									(2019-03-19)
+								</p>
+							</td>
+							<td>
+								환불요청
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="pagination">
+				<a href="#" class="prev">이전 페이지</a>
+				<a href="#" class="on">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#" class="next">다음 페이지</a>
+			</div>
+		</section>
+
+		<footer id="footer">
+			<div class="inner">
+				<div class="footer_btn">
+					<a href="#" class="btn">About Us</a>
+					<a href="#" class="btn">Help Center</a>
+					<a href="#" class="btn">PC Version</a>
+				</div>
+				<div class="footer_btn type-02">
+					<a href="#" class="btn">User Agreement</a>
+					<a href="#" class="btn">Privacy Policy</a>
+				</div>
+				<p class="copy">CopyRight &copy; Intercommerce</p>
+			</div>
+			<div class="fixed_area">
+				<a href="#" class="btn btn01">
+					<i>icon</i>
+					<span>Home</span>
+				</a>
+				<a href="#" class="btn btn02">
+					<i>icon</i>
+					<span>Category</span>
+				</a>
+				<a href="#" class="btn btn03">
+					<i>icon</i>
+					<span>Wish list</span>
+				</a>
+				<a href="#" class="btn btn04">
+					<i>icon</i>
+					<span>My</span>
+				</a>
+				<a href="#" class="btn btn05">
+					<i>icon</i>
+					<span>Today's view</span>
+				</a>
+			</div>
+		</footer>
+	</div>
+
+	<!-- popup -->
+	<div class="popup_wrap">
+		<div class="popup_box">
+			<div class="tit">경매보증금 환불<button type="button" class="btn close_btn">닫기</button></div>
+			<div class="scll_box">
+				<div class="table_wrap">
+					<dl>
+						<dt>환불가능 경매보증금</dt>
+						<dd>300,000 원</dd>
+					</dl>
+					<dl>
+						<dt>환불요청 경매보증금</dt>
+						<dd>
+							<input type="text" name="refund_request" id="refund_request">
+							<label for="refund_request" class="blind">환불요청 경매보증금</label>
+						</dd>
+					</dl>
+					<dl>
+						<dt>환불계좌은행</dt>
+						<dd>
+							<select name="refund_bank" id="refund_bank">
+								<option value="" selected hidden>:::: 선택 ::::</option>
+								<option value="">국민은행</option>
+								<option value="">신한은행</option>
+								<option value="">우리은행</option>
+								<option value="">하나은행</option>
+								<option value="">ibk기업은행</option>
+								<option value="">KDB산업은행</option>
+							</select>
+						</dd>
+					</dl>
+					<dl>
+						<dt>예금주명</dt>
+						<dd>
+							<input type="text" name="name_request" id="name_request">
+							<label for="name_request" class="blind">예금주명</label>
+						</dd>
+					</dl>
+					<dl>
+						<dt>환불계좌번호</dt>
+						<dd>
+							<input type="text" name="refund_num" id="refund_num" placeholder="- 없이 숫자만 입력">
+							<label for="refund_num" class="blind">환불계좌번호</label>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="btn_area type02">
+				<button class="btn n_agr" type="button">환불취소</button>
+				<button class="btn y_agr" type="button">환불신청</button>
+			</div>
+		</div>
+	</div>
+	<script>
+		$('.order_period .btn').on('click',function(){
+			$(this).siblings('.btn').removeClass('on');
+			$(this).addClass('on');
+		});
+
+		$('.popup_wrap .tit .close_btn').on('click',function(){
+			$(this).closest('.popup_wrap').fadeOut();
+		});
+
+		function acPopOpen() {
+			$('.popup_wrap').fadeIn();
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="csrf-token" content="78voZKhQ38Pc03Lpfwi9PBHSi3pyyP2Pz5Cw2fCq">
+<meta name="author" content="">
+<meta name="keyword" content="">
+<meta name="description" content="">
+<title>eBay Japan</title>
+<link rel="stylesheet" href="../css/general.css?v=1912">
+<link rel="stylesheet" href="../css/swiper.min.css">
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header" class="sub_header">
+			<!-- 메인 헤더 -->
+			<div class="inner">
+				<div class="header_sub">
+					<h1 class="tit_logo blind">
+						<a href="#">
+							<img src="../images/common/logo.png" alt="eBay company">
+						</a>
+					</h1>
+					<button type="button" class="btn prev">
+						<span>ビューティ・コスメ</span>
+					</button>
+					<div class="r_area">
+						<button type="button" class="btn cart">
+							cart
+							<!-- <span class="on">1</span> -->
+						</button>
+						<button type="button" class="btn search">Search</button>
+					</div>
+				</div>
+			</div>
+			<!-- //header_fixed -->
+		</header>
+        
+		<section class="category_con ctg_list_con">
+			<h2 class="blind">category</h2>
+			<div class="list_wrap">
+				<!-- <p class="cl_tit">ビューティ・コスメ</p> -->
+				<ul>
+					<li><a href="#"><span>コスメ</span></a></li>
+					<li><a href="#"><span>ヘア · ボディ · ネイル · 香水</span></a></li>
+					<li><a href="#"><span>コンタクトレンズ</span></a></li>
+					<li><a href="#"><span>美容 · ダイエット · 健康</span></a></li>
+					<li><a href="#"><span>ブランドコスメ</span></a></li>
+					<li class="empty">empty</li>
+				</ul>
+			</div>
+			<div class="category_img">
+				<img src="../images/sub/category_img.jpg" alt="category image">
+			</div>
+		</section>
+		
+
+		<div id="div_search_filter" class="result_filter">	
+			<div class="option_area">
+				<p class="tit">絞り込む</p>
+				<div class="r_area">
+					<a href="javascript:void(0)" class="btn ship_free">送料無料</a>
+					<!-- click시 on class추가 -->
+					<button type="button" class="btn filter" onclick="filterOpen()">フィルター</button>
+				</div>
+				<div class="fix_filter">
+					<div class="filter_bg"></div>
+					<button type="button" class="btn delete" onclick="filterClose()">filter popup close</button>
+					<div class="content">
+						<div class="filter_top">
+							<div class="tit_area">
+								<h3>검색필터</h3>
+								<button type="button" class="btn">선택필터적용</button>
+							</div>
+							<div class="chk_wrap">
+								<div class="chk_area">
+									<input type="checkbox" name="filter_chk01" id="filter_chk01">
+									<label for="filter_chk01" class="chk">현지 배송비 무료 상품<i></i></label>
+								</div>
+								<div class="chk_area">
+									<input type="checkbox" name="filter_chk02" id="filter_chk02">
+									<label for="filter_chk02" class="chk">우수 판매자 상품<i></i></label>
+								</div>
+								<div class="chk_area">
+									<input type="checkbox" name="filter_chk03" id="filter_chk03">
+									<label for="filter_chk03" class="chk">반품 가능 상품  <i></i></label>
+								</div>
+							</div>
+						</div>
+						<div class="filter_con">
+							<ul class="filter_list">
+								<li>
+									<a href="javascript:void(0)" class="ft_tit">구매 유형<span>전체상품</span></a>
+									<ul class="depth2">
+										<li>
+											<a href="javascript:void(0)" class="ft_tit">카테고리<span>의류/신발/잡화</span></a>
+											<ul class="depth3">
+												<li>
+													<div class="chk_area">
+														<input type="checkbox" name="check01_1" id="check01_1">
+														<label for="check01_1" class="chk">카테고리1<i></i>	</label>
+													</div>
+												</li>
+												<li>
+													<div class="chk_area">
+														<input type="checkbox" name="check01_2" id="check01_2">
+														<label for="check01_2" class="chk">카테고리2<i></i>	</label>
+													</div>
+												</li>
+												<li>
+													<div class="chk_area">
+														<input type="checkbox" name="check01_3" id="check01_3">
+														<label for="check01_3" class="chk">카테고리3<i></i>	</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="javascript:void(0)" class="ft_tit">색상<span>색상1,색상2,색상3</span></a>
+											<ul class="depth3">
+												<li>
+													<div class="chk_area">
+														<input type="checkbox" name="check02_1" id="check02_1">
+														<label for="check02_1" class="chk">색상1<i></i>	</label>
+													</div>
+												</li>
+												<li>
+													<div class="chk_area">
+														<input type="checkbox" name="check02_2" id="check02_2">
+														<label for="check02_2" class="chk">색상2<i></i>	</label>
+													</div>
+												</li>
+												<li>
+													<div class="chk_area">
+														<input type="checkbox" name="check02_3" id="check02_3">
+														<label for="check02_3" class="chk">색상3<i></i>	</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="javascript:void(0)" class="ft_tit">스타일<span>스타일3</span></a>
+											<ul class="depth3">
+												<li>
+													<div class="chk_area">
+														<input type="checkbox" name="check03_1" id="check03_1">
+														<label for="check03_1" class="chk">스타일1<i></i>	</label>
+													</div>
+												</li>
+												<li>
+													<div class="chk_area">
+														<input type="checkbox" name="check03_2" id="check03_2">
+														<label for="check03_2" class="chk">스타일2<i></i>	</label>
+													</div>
+												</li>
+												<li>
+													<div class="chk_area">
+														<input type="checkbox" name="check03_3" id="check03_3">
+														<label for="check03_3" class="chk">스타일3<i></i>	</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="javascript:void(0)" class="ft_tit">소재<span>소재1</span></a>
+											<ul class="depth3">
+												<li>
+													<div class="chk_area">
+														<input type="checkbox" name="check04_1" id="check04_1">
+														<label for="check04_1" class="chk">소재1<i></i>	</label>
+													</div>
+												</li>
+												<li>
+													<div class="chk_area">
+														<input type="checkbox" name="check04_2" id="check04_2">
+														<label for="check04_2" class="chk">소재2<i></i>	</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<button type="button" class="btn refresh"><span>검색필터 초기화</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="range_wrap">
+				<div id="price_range" class="range_price"><span>$0</span> ~ <span>$5000</span></div>
+				<div class="search_range">
+					<!-- Price range -->
+					<div class="slide_ctrler">
+						<!-- [js] Slider : jquery-ui.js -->
+						<div id="price_slider"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+        
+		<div class="result_goods">
+			<div class="rg_head">
+				<p class="total_num"><strong>1,908,921</strong> 件</p>
+				<div class="r_area">
+					<button type="button" class="btn btn_list">change button</button>
+					<div class="set_area">
+						<button type="button" class="btn btn_setting">Best Match</button><!-- 클릭시 on class추가-->
+						<div class="set_list">
+							<ul class="list_content">
+								<li class="on"><a href="javascript:void(0);">Best Match</a></li>
+								<li><a href="javascript:void(0);">Ending Soonest</a></li>
+								<li><a href="javascript:void(0);">Newly Listed</a></li>
+								<li><a href="javascript:void(0);">Price Highest First</a></li>
+								<li><a href="javascript:void(0);">Price Lowest First</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="rg_item_list">
+				<div class="list_inner">
+					<ul class="rg_list type_grid">
+						<li class="plus">
+							<p class="plus_txt">Deal plus</p>
+							<div class="img">
+								<a href="#"><img src="../images/sub/result_goods01.jpg" alt="goods image"></a>
+							</div>
+							<div class="txt_area">
+								<p class="rg_name"><a href="#">大容量2WAYトート、ショダーバッグ ダーバッグ[国内大容量大容量2WAY text text text text text text</a></p>
+								<div class="rg_info">
+									<span>送料無料</span>
+									<span class="status">New</span>
+								</div>
+								<div class="rg_info02">
+									<div class="info_l">
+										<div class="cost sale_cost">
+											<span class="cost_txt">$ 250.00 <strong>0 bids 2d 15h</strong></span>
+											<span class="cost_txt">$ 400.00 <strong>Buy It Now</strong></span>
+										</div>
+										<div class="txt_info">
+											Philadelphia, PA, USA
+										</div>
+									</div>
+									<div class="chk_area">
+										<input type="checkbox" name="list_heart01" id="list_heart01">
+										<label for="list_heart01" class="chk">like button</label>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<a href="#"><img src="../images/sub/result_goods02.jpg" alt="goods image"></a>
+							</div>
+							<div class="txt_area">
+								<p class="rg_name">大容量2WAYトート、ショダーバッグ ダーバッグ[国内大容量大容量2WAY</p>
+								<div class="rg_info">
+									<span>送料無料</span>
+									<span class="status">Used</span>
+								</div>
+								<div class="rg_info02">
+									<div class="info_l">
+										<div class="cost">
+											<span class="cost_txt">$ 400.00 <strong>Buy It Now</strong></span>
+										</div>
+										<div class="txt_info">
+											Philadelphia, PA, USA
+										</div>
+									</div>
+									<div class="chk_area">
+										<input type="checkbox" name="list_heart02" id="list_heart02">
+										<label for="list_heart02" class="chk">like button</label>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<a href="#"><img src="../images/sub/result_goods04.jpg" alt="goods image"></a>
+							</div>
+							<div class="txt_area">
+								<p class="rg_name"><a href="#">大容量2WAYトート、ショダーバッグ ダーバッグ[国内大容量大容量2WAY text text text text text text</a></p>
+								<div class="rg_info">
+									<span>送料無料</span>
+									<span class="status">Refurbished</span>
+								</div>
+								<div class="rg_info02">
+									<div class="info_l">
+										<div class="cost">
+											<span class="cost_txt">$ 200.00 <strong>Buy It Now</strong></span>
+										</div>
+										<div class="txt_info">
+											Philadelphia, PA, USA
+										</div>
+									</div>
+									<div class="chk_area">
+										<input type="checkbox" name="list_heart03" id="list_heart03">
+										<label for="list_heart03" class="chk">like button</label>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<a href="#"><img src="../images/sub/result_goods01.jpg" alt="goods image"></a>
+							</div>
+							<div class="txt_area">
+								<p class="rg_name"><a href="#">大容量2WAYトート、ショダーバッグ ダーバッグ[国内大容量大容量2WAY text text text text text text</a></p>
+								<div class="rg_info">
+									<span>送料無料</span>
+									<span class="status">New</span>
+								</div>
+								<div class="rg_info02">
+									<div class="info_l">
+										<div class="cost sale_cost">
+											<span class="cost_txt">$ 250.00 <strong>50 bids 5d 45h</strong></span>
+											<span class="cost_txt">$ 400.00 <strong>Buy It Now</strong></span>
+										</div>
+										<div class="txt_info">
+											Philadelphia, PA, USA
+										</div>
+									</div>
+									<div class="chk_area">
+										<input type="checkbox" name="list_heart04" id="list_heart04">
+										<label for="list_heart04" class="chk">like button</label>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="pagination">
+					<a href="#" class="prev">이전 페이지</a>
+					<a href="#" class="on">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">99</a>
+					<a href="#" class="next">다음 페이지</a>
+				</div>
+			</div>
+		</div>
+
+		<footer id="footer">
+			<div class="inner">
+				<div class="footer_btn">
+					<a href="#" class="btn">About Us</a>
+					<a href="#" class="btn">Help Center</a>
+					<a href="#" class="btn">PC Version</a>
+				</div>
+				<div class="footer_btn type-02">
+					<a href="#" class="btn">User Agreement</a>
+					<a href="#" class="btn">Privacy Policy</a>
+				</div>
+				<p class="copy">CopyRight &copy; Intercommerce</p>
+			</div>
+			<div class="fixed_area">
+				<a href="#" class="btn btn01">
+					<i>icon</i>
+					<span>Home</span>
+				</a>
+				<a href="#" class="btn btn02">
+					<i>icon</i>
+					<span>Category</span>
+				</a>
+				<a href="#" class="btn btn03">
+					<i>icon</i>
+					<span>Wish list</span>
+				</a>
+				<a href="#" class="btn btn04">
+					<i>icon</i>
+					<span>My</span>
+				</a>
+				<a href="#" class="btn btn05">
+					<i>icon</i>
+					<span>Today's view</span>
+				</a>
+			</div>
+		</footer>
+	</div>
+	<script>
+
+		$('.result_filter .option_area .ship_free').on('click',function(){
+			$(this).toggleClass('on')
+		});
+
+		/* range_slider */
+		$( "#price_slider" ).slider({
+			range: true,
+			min: 0,
+			max: 5000,
+			/*slide: function( event, ui ) {
+				$( "#price" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            }*/
+		});
+		$('#price_slider .ui-state-default').last().css("left","100%");
+		$('#price_slider .ui-widget-header').css("width","100%");
+
+		/* goods setting */
+		$('.result_goods .rg_head .set_area .btn').on('click',function(){
+			$(this).toggleClass('on');
+			$(this).next('.set_list').fadeToggle();
+		});
+		$('.result_goods .rg_head .set_area .set_list a').on('click',function(){
+			$('.result_goods .rg_head .set_area .btn').removeClass('on');
+			$(this).closest('.set_list').fadeOut();
+		});
+
+		/* list type change button */
+		$('.result_goods .rg_head .r_area').children('.btn').on('click',function(){
+			if ($(this).hasClass('btn_grid')) {
+				$(this).removeClass('btn_grid');
+				$('.rg_item_list .rg_list').removeClass('type_list');
+				$(this).addClass('btn_list');
+				$('.rg_item_list .rg_list').addClass('type_grid');
+			} else {
+				$(this).removeClass('btn_list');
+				$('.rg_item_list .rg_list').removeClass('type_grid');
+				$(this).addClass('btn_grid');
+				$('.rg_item_list .rg_list').addClass('type_list');
+			}
+		});
+
+		/* filter popup open */
+		function filterOpen() {
+			$('.fix_filter').fadeIn();
+			$('.fix_filter .content').animate({
+				left: '55px',
+				right: '0'
+			},500);
+			$('html, body').css({"overflow": "hidden", "height": "100%"});
+		}
+		function filterClose() {
+			$('.fix_filter').fadeOut();
+			$('.fix_filter .content').animate({
+				left: 'auto',
+				right: '-500px'
+			},500);
+			$('html, body').css({"overflow": "auto", "height": "auto"});
+		}
+		$('.filter_con .ft_tit').on('click',function(){
+			if ($(this).hasClass('on')){
+				$(this).removeClass('on');
+				$(this).next('ul').slideUp();
+			} else {
+				$(this).closest('li').siblings('li').find('.ft_tit').removeClass('on');
+				$(this).closest('li').siblings('li').find('ul').slideUp();
+				$(this).addClass('on');
+				$(this).next('ul').slideDown();
+			}
+		});
+	</script>
+</body>
+</html>

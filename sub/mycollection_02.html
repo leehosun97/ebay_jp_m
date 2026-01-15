@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="csrf-token" content="78voZKhQ38Pc03Lpfwi9PBHSi3pyyP2Pz5Cw2fCq">
+<meta name="author" content="">
+<meta name="keyword" content="">
+<meta name="description" content="">
+<title>eBay Japan</title>
+<link rel="stylesheet" href="../css/general.css?v=1912">
+<link rel="stylesheet" href="../css/swiper.min.css">
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header" class="main_header">
+			<!-- 메인 헤더 -->
+			<div class="inner">
+				<div class="header_sub">
+					<h1 class="tit_logo blind">
+						<a href="#">
+							<img src="../images/common/logo.png" alt="eBay company">
+						</a>
+					</h1>
+					<button type="button" class="btn prev">
+						<span style="font-size: 16px;letter-spacing: -0.05em;">마이 컬렉션</span>
+					</button>
+					<div class="r_area">
+						<button type="button" class="btn cart">
+							cart
+							<span class="on">1</span>
+						</button>
+						<button type="button" class="btn search">Search</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<ul class="sub_tap">
+			<li><a href="mycollection_01.html">상품</a></li>
+			<li class="on"><a href="mycollection_02.html">검색어</a></li>
+			<li><a href="mycollection_03.html">카테고리</a></li>
+			<li><a href="mycollection_04.html">셀러</a></li>
+		</ul>
+		<section class="cart_info">
+			<h2 class="blind">mycollection02</h2>
+			<div class="info_txt">
+				<span>최대 20개까지 보관되며 초과시 오래된 항목부터 삭제됩니다.</span>
+			</div>
+		</section>
+		<section class="cart_goods type02">
+			<h2 class="blind">mycollection02</h2>
+			<div class="goods_con">
+				<div class="con_box">
+					<div class="txt">
+						<p>ipohone se</p>
+					</div>
+					<div class="order" style="padding-top: 0;">
+						<button type="button" class="btn">삭제</button>
+					</div>
+				</div>
+				<div class="con_box">
+					<div class="txt">
+						<p>ipohone se</p>
+					</div>
+					<div class="order" style="padding-top: 0;">
+						<button type="button" class="btn">삭제</button>
+					</div>
+				</div>
+				<div class="con_box">
+					<div class="txt">
+						<p>ipohone se</p>
+					</div>
+					<div class="order" style="padding-top: 0;">
+						<button type="button" class="btn">삭제</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="pagination mt0">
+			<a href="#" class="prev">이전 페이지</a>
+			<a href="#" class="on">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">99</a>
+			<a href="#" class="next">다음 페이지</a>
+		</div>
+		<footer id="footer">
+			<div class="inner">
+				<div class="footer_btn">
+					<a href="#" class="btn">About Us</a>
+					<a href="#" class="btn">Help Center</a>
+					<a href="#" class="btn">PC Version</a>
+				</div>
+				<div class="footer_btn type-02">
+					<a href="#" class="btn">User Agreement</a>
+					<a href="#" class="btn">Privacy Policy</a>
+				</div>
+				<p class="copy">CopyRight &copy; Intercommerce</p>
+			</div>
+		</footer>
+	</div>
+	<script>
+		var swiper = new Swiper('.swiper-container',{
+			slidesPerView: 5,
+			spaceBetween: 10,
+		});
+		/* search_today */
+		var officialSwipe01 = new Swiper('.today_slide .swiper-container', {
+			slidesPerGroup:1,
+			slidesPerView: 3.8,
+			spaceBetween:15,
+			draggable:true,
+		});
+
+		/* header_search onclick */
+		function srchOpen() {
+			$('#div_search_form').css({"z-index": "100", "opacity": "1"});
+			$('html, body').css({"overflow": "hidden", "height": "100%"});
+		}
+		function srchClose() {
+			$('#div_search_form').css({"z-index": "-1", "opacity": "0"});
+			$('html, body').css({"overflow": "auto", "height": "auto"});
+		}
+
+		/* banner Popup onclick */
+		function bnOpen() {
+			$('#banner_list_popup').fadeIn();
+			$('html, body').css({"overflow": "hidden", "height": "100%"});
+		}
+		function bnClose() {
+			$('#banner_list_popup').fadeOut();
+			$('html, body').css({"overflow": "auto", "height": "auto"});
+		}
+	</script>
+</body>
+</html>

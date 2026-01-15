@@ -1,0 +1,417 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<title>Ebay 마크업리스트</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<style>
+		*{-webkit-text-size-adjust:none;}
+		html,body{width:100%;height:100%; min-width:800px;}
+		html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, ul, li, fieldset, form, label, leging, table, caption, tbody, tfoot, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{margin:0; padding:0; outline:0; font-family:NanumGothic,'나눔고딕',Dotum,'돋움',applegothic,sans-serif; font-size:13px; color:#555; /*vertical-align:baseline;*/}
+		body{line-height:1.2em; border:0;}
+		strong, em, span, wbr, a{display:inline-block;}
+		span{margin:0; padding:0; outline:0;}
+		hr{display:none}
+		ol, ul, ,dl, dt, dd{list-style:none outside none; padding:0; margin:0;}
+		fieldset, img, table, caption, tbody, tfoot, thead, tr, th, td, button, hr{border:0;}
+		address, caption, cite, code, dfn, em, strong, th, var{font-style: normal;}
+		img{vertical-align:middle;}
+		a{cursor:pointer; text-decoration:none; color:#666;}
+		table{border-collapse:collapse;}
+		#wrap{padding:12px;}
+		#header{margin-bottom:20px;}
+		#header::after{content:''; clear:both; display:block;}
+		#header>h1{float:left; font-size:28px; color:#1a1a1a; padding-top:15px;}
+		#header>div{float:right;}
+		#header>div>p{font-size:11px; color:#888; text-align:right;}
+		div.box{border:1px solid #dedede; background:#f1f1f1; padding:12px 14px; margin-bottom:10px;}
+		h3{font-size:14px; color:#333; margin-bottom:13px;}
+		h4{font-size:14px; color:#333; margin:25px 0 8px 5px;}
+		ol.atten>li{margin-bottom:8px; padding:0; line-height:160%;}
+		ol.atten>li:last-child{margin-bottom:0;}
+		table.htmllist th,table.htmllist td{border:1px solid #ccc;}
+		table.htmllist tr:first-child td{text-align:center; font-weight:bold; border-bottom:1px solid #111 !important; height:30px; color:#000 !important; font-size:13px !important;}
+		table.htmllist th{padding:5px 6px; text-align:left; border-bottom:2px solid #ef262c !important; height:32px; background-color:#f3f4f8;}
+		table.htmllist th.depth2{padding: 2px 18px; text-align:left; border-bottom:1px solid #333 !important; height:30px; font-size: 12px; background-color: #fff}
+		table.htmllist td{padding:5px 6px;}
+		table.htmllist td:first-child{text-align:center;}
+		table.htmllist td:last-child{color:#888; font-size:12px;}
+		table.htmllist td:nth-child(4),table.htmllist td:nth-child(6),table.htmllist td:nth-child(7){text-align:center;}
+		table.htmllist td:nth-child(7){color:#5bcdda; font-size:11px; font-weight:bold;}
+		table.htmllist td > a{display:block; width:100%; height:26px; line-height:26px; text-align:center; color:#fff; font-size:11px; font-weight:bold; vertical-align:middle; background-color:#ef262c; border:1px solid #ef262c; border-radius:3px;}
+		table.htmllist td>a:hover{background-color:#ed8689; line-height:28px;}
+		table.htmllist tr:hover>td{background-color:#fffad2;}
+		table.htmllist td.ing{text-align:center; font-size:12;}
+		table.htmllist td.end{text-align:center; font-size:12; font-weight:bold; background-color:#b8bbbf; color:#1a1a1a;}
+		/* .total{padding:10px 5px 20px} */
+		.total .tit_txt{padding-left:10px;margin-left:10px;border-left:1px solid #ddd;}
+		.total h3 + .tit_txt{padding-left:0;margin-left:0;border-left:none;}
+		.total_page_num{font-size:18px;color:#5bcdda;}
+	</style>
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		<h1>Ebay 마크업리스트</h1>
+		<div>
+			<p>Version: <b>0.0.01</b></p>
+			<p>Last Update: <b>2019.12.23</b></p>
+			<p>Coding: <b>HTML5&amp;CSS3</b></p>
+			<!-- <p>Guide: <b><a href="guide/guide.html" target="_blank">guide.html</a></b></p> -->
+		</div>
+	</div>
+	<h4>코딩 목록</h4>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="htmllist">
+		<thead>
+			<tr class="head">
+				<td>No</td>
+				<td>Path</td>
+				<td>FileName</td>
+				<td>State</td>
+				<td>View</td>
+				<td>Update</td>
+				<td>Author</td>
+				<td>Remark</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th colspan="8">메인화면</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/main/</td>
+				<td>main.html</td>
+				<td class="end">end</td>
+				<td><a href="./main/main.html" target="_blank">View</a></td>
+				<td>2019-12-20</td>
+				<td></td>
+				<td>메인화면</td>
+			</tr>
+			<tr>
+				<th colspan="8">이베이핫딜,기획전</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/main/</td>
+				<td>hot_deal.html</td>
+				<td class="end">end</td>
+				<td><a href="./main/hot_deal.html" target="_blank">View</a></td>
+				<td>2019-12-30</td>
+				<td></td>
+				<td>핫딜</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>exhibition.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/exhibition.html" target="_blank">View</a></td>
+				<td>2020-01-02</td>
+				<td></td>
+				<td>기획전</td>
+			</tr>
+		</tbody>
+		<tbody>
+			<tr>
+				<th colspan="8">카트,주문,마이이베이</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>cart.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/cart.html" target="_blank">View</a></td>
+				<td>2019-12-20</td>
+				<td></td>
+				<td>카트</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>order_sheet.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/order_sheet.html" target="_blank">View</a></td>
+				<td>2019-12-20</td>
+				<td></td>
+				<td>주문서</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>my_ebay.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/my_ebay.html" target="_blank">View</a></td>
+				<td>2019-12-23</td>
+				<td></td>
+				<td>마이 이베이</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>order_list.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/order_list.html" target="_blank">View</a></td>
+				<td>2020-01-03</td>
+				<td></td>
+				<td>주문 리스트</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>order_detail.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/order_detail.html" target="_blank">View</a></td>
+				<td>2020-01-03</td>
+				<td></td>
+				<td>주문 상세</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>order_complete.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/order_complete.html" target="_blank">View</a></td>
+				<td>2020-01-03</td>
+				<td></td>
+				<td>주문 완료</td>
+			</tr>
+			<tr>
+				<th colspan="8">검색,리스트</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>category.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/category.html" target="_blank">View</a></td>
+				<td>2019-12-30</td>
+				<td></td>
+				<td>카테고리</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>category_list.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/category_list.html" target="_blank">View</a></td>
+				<td>2020-01-02</td>
+				<td></td>
+				<td>카테고리 리스트</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>search_result.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/search_result.html" target="_blank">View</a></td>
+				<td>2019-12-30</td>
+				<td></td>
+				<td>검색결과 리스트</td>
+			</tr>
+			<tr>
+				<th colspan="8">상품상세페이지,구매</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>detail_page.html</td>
+				<td class="end">end</td>
+				<td><a href="sub/detail_page.html" target="_blank">View</a></td>
+				<td>2019-12-30</td>
+				<td></td>
+				<td>상품상세</td>
+			</tr>
+			<tr>
+				<th colspan="8">My collection</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>mycollection_01.html</td>
+				<td class="end">end</td>
+				<td><a href="sub/mycollection_01.html" target="_blank">View</a></td>
+				<td>2020-01-02</td>
+				<td></td>
+				<td>마이콜렉션01</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>mycollection_02.html</td>
+				<td class="end">end</td>
+				<td><a href="sub/mycollection_02.html" target="_blank">View</a></td>
+				<td>2020-01-02</td>
+				<td></td>
+				<td>마이콜렉션02</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>mycollection_03.html</td>
+				<td class="end">end</td>
+				<td><a href="../sub/mycollection_03.html" target="_blank">View</a></td>
+				<td>2020-01-02</td>
+				<td></td>
+				<td>마이콜렉션03</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>mycollection_04.html</td>
+				<td class="end">end</td>
+				<td><a href="sub/mycollection_04.html" target="_blank">View</a></td>
+				<td>2020-01-02</td>
+				<td></td>
+				<td>마이콜렉션04</td>
+			</tr>
+			<tr>
+				<th colspan="8">shopping_list</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>help_01.html</td>
+				<td class="end">end</td>
+				<td><a href="sub/help_01.html" target="_blank">View</a></td>
+				<td>2020-01-02</td>
+				<td></td>
+				<td>help01</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>help_02.html</td>
+				<td class="end">end</td>
+				<td><a href="sub/help_02.html" target="_blank">View</a></td>
+				<td>2020-01-02</td>
+				<td></td>
+				<td>help02</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>help_03.html</td>
+				<td class="end">end</td>
+				<td><a href="sub/help_03.html" target="_blank">View</a></td>
+				<td>2020-01-02</td>
+				<td></td>
+				<td>help03</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>myinfo.html</td>
+				<td class="end">end</td>
+				<td><a href="sub/myinfo.html" target="_blank">View</a></td>
+				<td>2020-01-02</td>
+				<td></td>
+				<td>내정보</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>myauction.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/myauction.html" target="_blank">View</a></td>
+				<td>2020-01-03</td>
+				<td></td>
+				<td>Auction</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>myreview.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/myreview.html" target="_blank">View</a></td>
+				<td>2020-01-06</td>
+				<td></td>
+				<td>Review</td>
+			</tr>
+			<tr>
+				<th colspan="8">my_account</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>account01.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/account01.html" target="_blank">View</a></td>
+				<td>2020-01-03</td>
+				<td></td>
+				<td>쿠폰</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>account02.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/account02.html" target="_blank">View</a></td>
+				<td>2020-01-03</td>
+				<td></td>
+				<td>E-cash</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>account03.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/account03.html" target="_blank">View</a></td>
+				<td>2020-01-03</td>
+				<td></td>
+				<td>Deposit (auction money)</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>qna_list.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/qna_list.html" target="_blank">View</a></td>
+				<td>2020-01-06</td>
+				<td></td>
+				<td>Q&amp;A</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>qna_view.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/qna_view.html" target="_blank">View</a></td>
+				<td>2020-01-06</td>
+				<td></td>
+				<td>Q&amp;A_view</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>/sub/</td>
+				<td>qna_write.html</td>
+				<td class="end">end</td>
+				<td><a href="./sub/qna_write.html" target="_blank">View</a></td>
+				<td>2020-01-06</td>
+				<td></td>
+				<td>Q&amp;A_write</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<script>
+	var totalPageNum = 0;
+	$('tbody').each(function(idx){
+		var titTxt = $('tbody').eq(idx).find('th').text();
+		$('.total').append('<span class="tit_txt">' + titTxt + ': </span>')
+		$(this).find('tr').each(function(i){
+			$(this).find('td:first-child').text(i);
+			num = $(this).filter(':last-child').find('td:first-child').text();
+		});
+		$('.total').append('<strong>' + num + '</strong>');
+		totalPageNum += parseInt(num);
+	});
+	$('.total h3').append('<strong class="total_page_num">' + totalPageNum + '</strong>');
+	console.log($('tbody tr').length)
+</script>
+</body>
+</html>
